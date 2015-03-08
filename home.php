@@ -4,6 +4,10 @@
  *  Espace d'affichage des menus
  */
 
+require_once('libraries.php');
+
+$items = getItems();
+
 ?>
 <html><head><title>Menuteur</title>
 <style>
@@ -25,9 +29,9 @@
 			<li><a href="admin.php">Admin</a></li>
 		</ul>
 		<ul class="menu">
-			<li><a href="link">Text</a></li>
-			<li><a href="link">Text</a></li>
-			<li><a href="link">Text</a></li>
+<?php 	foreach($items as $i_item) { ?>
+			<li><a href="<?php echo $i_item['link']; ?>"><?php echo $i_item['text']; ?></a></li>
+<?php 	} ?>
 		</ul>
 	</nav>
 	<hr />
