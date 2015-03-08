@@ -1,0 +1,50 @@
+# Menuteur
+
+## TP Blanc cours PHP
+
+### Consignes de base
+
+À l'aide des 3 scripts PHP fournis, et uniquement à l'intérieur de ces fichiers,
+vous devez créer un outil de création (enregistrement)
+et d'affichage d'items de menus.
+
+Un item aura 2 propritétés : du texte "text" et une url "link"
+ ________________
+|      item      |
+|----------------|
+| - text         |
+| - link         |
+|________________|
+
+Objectif principal :
+  - les items de menu ajoutés doivent être enregistrés sous forme de
+  tableau php sérialisé, dans un fichier simple tel que configuré
+  dans libraries.php
+  - les items doivent être affichés à l'intérieur du menu
+  sur la page home.php
+  - l'ajout d'items doit se faire sur la page admin.php
+
+Objectif secondaire :
+  - Protéger la page admin.php par le mot de passe "supermenu"
+  avec un cookie ou un input type hidden ou une session
+
+Objectifs bonus :
+  - Utiliser les sessions pour la protection par mot de passe et permettre
+  la déconnexion
+  - Permettre de choisir une catégorie pour un item de menu,
+  et afficher un menu par catégorie d'item
+
+*home.php
+  Ce fichier servira à afficher le menu créé, suivre l'exemple du menu
+  avec les items de test "Text"
+  Aucune modification du CSS n'est demandée
+  
+*admin.php
+  Ce fichier servira à rajouter des items au menu (formulaire)
+
+*libraries.php
+  Ce fichier contient 2 fonctions qui permettent de sauvegarder et récupérer
+  les items de menu.
+  Vous devez conserver les noms de fonction et paramètres imposés
+  mais vous pouvez les faire évoluer en suivant les consignes
+
