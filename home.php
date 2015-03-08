@@ -4,6 +4,10 @@
  *  Espace d'affichage des menus
  */
 
+require_once('libraries.php');
+
+$items = getItems();
+
 ?>
 <html><head><title>Menuteur</title>
 <style>
@@ -24,11 +28,13 @@
 			<li><a href="home.php">Home</a></li>
 			<li><a href="admin.php">Admin</a></li>
 		</ul>
-		<ul class="menu">
-			<li><a href="link">Text</a></li>
-			<li><a href="link">Text</a></li>
-			<li><a href="link">Text</a></li>
+<?php foreach($items as $i_category => $i_items_categorie) { ?>
+		<ul class="menu" id="<?php echo $i_category; ?>">
+<?php 	foreach($i_items_categorie as $i_item) { ?>
+			<li><a href="<?php echo $i_item['link']; ?>"><?php echo $i_item['text']; ?></a></li>
+<?php 	} ?>
 		</ul>
+<?php } ?>
 	</nav>
 	<hr />
 	<footer><a href="autobot.php" target="_blank">Autobot</a></footer>
